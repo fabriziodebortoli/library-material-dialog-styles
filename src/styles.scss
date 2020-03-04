@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+
+@import './custom';
+
+$md-custom-typography: mat-typography-config(
+    $font-family: $custom-font
+);
+
+@include mat-core($md-custom-typography);
+
+$b2b-demo-portal-primary: mat-palette($md-customblue);
+$b2b-demo-portal-accent: mat-palette($md-custompink);
+$b2b-demo-portal-warn: mat-palette($mat-red);
+
+$md-custom-theme: mat-light-theme($b2b-demo-portal-primary, $b2b-demo-portal-accent, $b2b-demo-portal-warn);
+
+@include angular-material-theme($md-custom-theme);
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: $custom-font;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 700;
+    color: $custom-text-dark;
+    // white-space: pre;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
