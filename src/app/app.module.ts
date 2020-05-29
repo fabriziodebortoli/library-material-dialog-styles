@@ -7,10 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule, MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
+import { LibraryModule } from '@azz/library'; // BROKEN
+// import { LibraryModule } from 'projects/azz/library/src/public-api';
+
 @NgModule({
     declarations: [AppComponent],
-    imports: [BrowserModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule],
+    imports: [BrowserModule, BrowserAnimationsModule, MatDialogModule, MatButtonModule, LibraryModule],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
