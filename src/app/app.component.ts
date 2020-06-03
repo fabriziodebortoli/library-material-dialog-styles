@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogModel, ConfirmDialogComponent } from 'projects/azz/library/src/lib/dialogs/confirm-dialog/confirm-dialog.component';
+import { ConfirmDialogModel, ConfirmDialogComponent } from '@azz/library';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
     constructor(private dialog: MatDialog) {}
@@ -17,10 +17,10 @@ export class AppComponent {
 
         const dialogRef = this.dialog.open(ConfirmDialogComponent, {
             maxWidth: '400px',
-            data: dialogData
+            data: dialogData,
         });
 
-        dialogRef.afterClosed().subscribe(dialogResult => {
+        dialogRef.afterClosed().subscribe((dialogResult) => {
             if (dialogResult) {
                 // this.notificationService.error('Error removing member...');
                 console.log('dialogResult YES', dialogResult);
